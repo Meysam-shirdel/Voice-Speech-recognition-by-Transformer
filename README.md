@@ -22,7 +22,21 @@ The primary objective of speech recognition is to develop a model that can accur
 
 
 ## 2. Related Works
-This section explores existing research and solutions related to medical image segmentation. 
+This section explores existing research and solutions related to speech recognition using deep learning models from 2017 to 2023, including the exact models used, descriptions, and links to their papers or GitHub repositories:
+
+| Date | Title                                  | Description                                                                                                 | Links                                                                                              |
+|------|----------------------------------------|-------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
+| 2017 | Deep Speech 2                          | Utilizes Recurrent Neural Networks (RNN) with Connectionist Temporal Classification (CTC) loss.             | [Paper](https://arxiv.org/abs/1512.02595) [GitHub](https://github.com/baidu-research/warp-ctc)     |
+| 2018 | Transformer ASR                        | Uses Transformer architecture for speech recognition, emphasizing self-attention mechanisms.                 | [Paper](https://arxiv.org/abs/1809.08895) [GitHub](https://github.com/espnet/espnet)               |
+| 2019 | QuartzNet                              | A convolutional neural network (CNN) model using 1D time-channel separable convolutions for ASR.             | [Paper](https://arxiv.org/abs/1910.10261) [GitHub](https://github.com/NVIDIA/DeepLearningExamples/tree/master/PyTorch/SpeechRecognition/Jasper) |
+| 2020 | Wav2Vec 2.0                            | Combines CNN and Transformer models for self-supervised learning of speech representations.                  | [Paper](https://arxiv.org/abs/2006.11477) [GitHub](https://github.com/pytorch/fairseq/tree/main/examples/wav2vec) |
+| 2020 | Conformer-CTC                          | Integrates convolutional layers with Transformer layers for enhanced ASR performance.                        | [Paper](https://arxiv.org/abs/2006.11477) [GitHub](https://github.com/espnet/espnet)               |
+| 2021 | HuBERT                                 | Utilizes a masked prediction task to learn hidden representations of speech.                                 | [Paper](https://arxiv.org/abs/2106.07447) [GitHub](https://github.com/pytorch/fairseq/tree/main/examples/hubert) |
+| 2022 | Whisper                                | OpenAI's ASR model designed for robustness across different languages and accents.                           | [Paper](https://openai.com/research/whisper) [GitHub](https://github.com/openai/whisper)           |
+| 2023 | Efficient Conformer                    | A variant of Conformer with efficient computation tailored for low-latency ASR applications.                 | [Paper](https://arxiv.org/abs/2305.00359) [GitHub](https://github.com/espnet/espnet)               |
+| 2023 | E-Branchformer                         | A hybrid model combining Branchformer architecture with enhancements for ASR tasks.                          | [Paper](https://arxiv.org/abs/2305.00120) [GitHub](https://github.com/espnet/espnet)               |
+
+
 
 ## 3. The Proposed Method
 Here, the proposed approach for solving the problem is detailed. It covers the algorithms, techniques, or deep learning models to be applied, explaining how they address the problem and why they were chosen.
