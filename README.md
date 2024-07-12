@@ -39,7 +39,15 @@ This section explores existing research and solutions related to speech recognit
 
 
 ## 3. The Proposed Method
-Here, the proposed approach for solving the problem is detailed. It covers the algorithms, techniques, or deep learning models to be applied, explaining how they address the problem and why they were chosen.
+Transformers, originally introduced in the paper "Attention is All You Need" by Vaswani et al. in 2017, have revolutionized natural language processing (NLP) by relying solely on self-attention mechanisms, foregoing recurrent architectures entirely. This innovation has since been adapted for Automatic Speech Recognition (ASR), resulting in substantial improvements.
+Transformers have significantly advanced the field of speech recognition, offering powerful models that improve accuracy, efficiency, and scalability. 
+
+Transformers are used in end-to-end models where the raw audio or its features are directly mapped to text without intermediate steps like phoneme recognition. Also, Transformers are combined with other architectures, such as Convolutional Neural Networks (CNNs) or Recurrent Neural Networks (RNNs), to leverage the strengths of multiple approaches. In this task, we used a CNN as featuer embedding method combined with transformer layer.
+
+<div align="center">
+    <img src="title method.jpg" alt="Logo" width="" height="300">
+<h4 align="center">Proposed method</h4>
+</div>
 
 ## 4. Implementation
 This section delves into the practical aspects of the project's implementation.
