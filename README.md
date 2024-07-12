@@ -1,9 +1,9 @@
 <div align="center">
-  <a href="https://www.kaggle.com/competitions/uw-madison-gi-tract-image-segmentation">
-    <img src="cover.png" alt="Logo" width="" height="200">
+  
+    <img src="title image.jpg" alt="Logo" width="" height="200">
   </a>
 
-<h1 align="center">Medica Image Segmentation</h1>
+<h1 align="center">Speech Recognition</h1>
 </div>
 
 This repository serves as the template for the third project in the Deep Catalyst course, focusing on medical image segmentation. Explore and utilize this template to kickstart your own medical image segmentation projects, leverage best practices, and accelerate your journey into the world of precise medical diagnostics through deep learning.
