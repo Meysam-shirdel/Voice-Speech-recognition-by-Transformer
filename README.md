@@ -45,7 +45,7 @@ Transformers have significantly advanced the field of speech recognition, offeri
 Transformers are used in end-to-end models where the raw audio or its features are directly mapped to text without intermediate steps like phoneme recognition. Also, Transformers are combined with other architectures, such as Convolutional Neural Networks (CNNs) or Recurrent Neural Networks (RNNs), to leverage the strengths of multiple approaches. In this task, we used a CNN as featuer embedding method combined with transformer layer.
 
 <div align="center">
-    <img src="title method.jpg" alt="Logo" width="" height="300">
+    <img src="method.jpg" alt="Logo" width="" height="300">
 <h4 align="center">Proposed method</h4>
 </div>
 
