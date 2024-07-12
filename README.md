@@ -1,8 +1,5 @@
 <div align="center">
-  
     <img src="title image.jpg" alt="Logo" width="" height="200">
-  </a>
-
 <h1 align="center">Speech Recognition</h1>
 </div>
 
