@@ -3,7 +3,14 @@
 <h1 align="center">Speech Recognition</h1>
 </div>
 
-This repository serves as the template for the third project in the Deep Catalyst course, focusing on medical image segmentation. Explore and utilize this template to kickstart your own medical image segmentation projects, leverage best practices, and accelerate your journey into the world of precise medical diagnostics through deep learning.
+Speech recognition, also known as automatic speech recognition (ASR), is a technology that enables the conversion of spoken language into written text. It is a complex task that involves understanding and processing human speech, which varies widely in terms of accents, pronunciations, speed, and context. Deep learning has revolutionized speech recognition by providing powerful models that can learn from vast amounts of audio data, improving the accuracy and robustness of ASR systems. 
+
+The primary objective of speech recognition is to develop a model that can accurately transcribe spoken words into written text. This involves several key challenges:
+
+- Acoustic Variability: * Handling different accents, intonations, and speaking speeds.*
+- Background Noise: Distinguishing speech from various background noises.
+- Context Understanding: Recognizing and interpreting words within the context of a sentence.
+- Vocabulary Size: Managing a large vocabulary and differentiating between similar-sounding words.
 
 ## 1. Problem Statement
 In this section, you'll find a comprehensive overview of the problem being addressed in the project.
