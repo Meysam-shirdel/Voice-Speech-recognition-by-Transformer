@@ -105,9 +105,8 @@ The whole structure of the model is as below:
         self.cls = nn.Linear(d_model, len(vocabs))
     
         self.init_weights()
-As shown in section 3, Proposed Method, the structure of model is composed several components. In preprocessing section, we used mel transform to get a two dimentional filtered frequency spectrom. 
-
-In the Feature Embedding, CNN is used to extract features from the output of mel spectrum.
+        
+As shown in section 3, Proposed Method, the structure of model is composed of several components. In preprocessing section, we used mel transform to get a two dimentional filtered frequency spectrom. The Feature Embedding is where that, CNN is used to extract features from the output of mel spectrum. Then we used TransformModel from Pytorch with the above settings and the final section is a classifier in the size of our vocab.
 
 
 ### 4.3. Configurations
