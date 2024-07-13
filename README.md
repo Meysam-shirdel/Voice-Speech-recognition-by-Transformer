@@ -112,6 +112,13 @@ As shown in section 3, Proposed Method, the structure of model is composed of se
 ### 4.3. Configurations
 This part outlines the configuration settings used for training and evaluation. It includes information on hyperparameters, optimization algorithms, loss function, metric, and any other settings that are crucial to the model's performance.
 
+**loss_fn =** nn.CrossEntropyLoss(ignore_index=0)
+
+**metric =** WER().to(device)
+
+**Optimizer =** torch.optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
+
+
 ### 4.4. Train
 Here, you'll find instructions and code related to the training of the segmentation model. This section covers the process of training the model on the provided dataset.
 
