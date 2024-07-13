@@ -53,8 +53,19 @@ Transformers are used in end-to-end models where the raw audio or its features a
 This section delves into the practical aspects of the project's implementation.
 
 ### 4.1. Dataset
-Under this subsection, you'll find information about the dataset used for the medical image segmentation task. It includes details about the dataset source, size, composition, preprocessing, and loading applied to it.
-[Dataset](https://www.kaggle.com/competitions/uw-madison-gi-tract-image-segmentation/data)
+Under this subsection, you'll find information about the dataset used for the Speech Recognition task. It includes details about the dataset source, size, composition, preprocessing, and loading applied to it. In this task, we used [The LJ Speech dataset](https://keithito.com/LJ-Speech-Dataset/)
+
+This is a public domain speech dataset consisting of 13,100 short audio clips of a single speaker reading passages from 7 non-fiction books. A transcription is provided for each clip. Clips vary in length from 1 to 10 seconds and have a total length of approximately 24 hours.
+
+The texts were published between 1884 and 1964, and are in the public domain. The audio was recorded in 2016-17 by the LibriVox project and is also in the public domain.
+
+Metadata is provided in transcripts.csv. This file consists of one record per line, delimited by the pipe character (0x7c). The fields are:
+
+- **ID:** this is the name of the corresponding .wav file
+- **Transcription:** words spoken by the reader (UTF-8)
+- **Normalized Transcription:** transcription with numbers, ordinals, and monetary units expanded into full words (UTF-8).
+Each audio file is a single-channel 16-bit PCM WAV with a sample rate of 22050 Hz.
+
 
 ### 4.2. Model
 In this subsection, the architecture and specifics of the deep learning model employed for the segmentation task are presented. It describes the model's layers, components, libraries, and any modifications made to it.
