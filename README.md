@@ -53,7 +53,7 @@ Transformers are used in end-to-end models where the raw audio or its features a
 This section delves into the practical aspects of the project's implementation.
 
 ### 4.1. Dataset
-Under this subsection, you'll find information about the dataset used for the Speech Recognition task. It includes details about the dataset source, size, composition, preprocessing, and loading applied to it. In this task, we used [The LJ Speech dataset](https://keithito.com/LJ-Speech-Dataset/)
+Under this subsection, you'll find information about the dataset used for the Speech Recognition task. It includes details about the dataset source, size, composition of the dadaset. In this task, we used [The LJ Speech dataset](https://keithito.com/LJ-Speech-Dataset/)
 
 This is a public domain speech dataset consisting of 13,100 short audio clips of a single speaker reading passages from 7 non-fiction books. A transcription is provided for each clip. Clips vary in length from 1 to 10 seconds and have a total length of approximately 24 hours.
 
@@ -65,10 +65,50 @@ Metadata is provided in transcripts.csv. This file consists of one record per li
 - **Transcription:** words spoken by the reader (UTF-8)
 - **Normalized Transcription:** transcription with numbers, ordinals, and monetary units expanded into full words (UTF-8).
 Each audio file is a single-channel 16-bit PCM WAV with a sample rate of 22050 Hz.
+More detail can be found in the above provided link.
 
 
 ### 4.2. Model
 In this subsection, the architecture and specifics of the deep learning model employed for the segmentation task are presented. It describes the model's layers, components, libraries, and any modifications made to it.
+The whole structure of the model is as below:
+    class SpeechRecognitionModel(nn.Module):
+    
+      def __init__(self,
+                   d_model, nhead, num_encoders, num_decoders, dim_feedforward, dropout=0.1, activation=F.relu,
+                   cnn_mode='simple', inplanes=32, planes=64,
+                   n_mels=128, n_fft=400):
+        super().__init__()
+    
+        # Transform
+        self.transforms = nn.Sequential(
+            T.Resample(orig_freq=sample_rate, new_freq=16000),
+            T.MelSpectrogram(n_mels=n_mels, n_fft=n_fft),
+            # T.FrequencyMasking()
+            ).requires_grad_(False)
+    
+        # Feature embedding
+        self.cnn_mode = cnn_mode
+        if cnn_mode == 'simple':
+          self.cnn = CNN2dFeatureExtractor(inplanes=inplanes, planes=planes)
+        elif cnn_mode == 'resnet':
+          self.cnn = ResNetFeatureExtractor()
+        else:
+          raise NotImplementedError("Please select one of the simple or resnet model")
+    
+        # Transformer
+        self.transformers = TransformerModel(
+            d_model=d_model, nhead=nhead,
+            num_encoders=num_encoders, num_decoders= num_decoders,
+            dim_feedforward=dim_feedforward, dropout=dropout, activation=activation)
+    
+        # Classifier
+        self.cls = nn.Linear(d_model, len(vocabs))
+    
+        self.init_weights()
+As shown in section 3, Proposed Method, the structure of model is composed several components. In preprocessing section, we used mel transform to get a two dimentional filtered frequency spectrom. 
+
+In the Feature Embedding, CNN is used to extract features from the output of mel spectrum.
+
 
 ### 4.3. Configurations
 This part outlines the configuration settings used for training and evaluation. It includes information on hyperparameters, optimization algorithms, loss function, metric, and any other settings that are crucial to the model's performance.
