@@ -131,12 +131,12 @@ weight decay: [1e-6, 1e-5, 1e-4]
 
 The best train loss for above grid with two epoch obtained with LR= 0.05, WD= 1e-4, and momentum=0.9
 
-Then, after training the best model from previous step with LR= 0.05, WD=1e-4, result shows train loss=0.728 and metric= 0.817 and for validation, loss=0.7552 and metric=0.801  
+Then, after training the best model from previous step with LR= 0.05, WD=1e-4 for 30 epochs, result shows train loss=0.728 and metric= 0.817 and for validation, loss=0.7552 and metric=0.801.
 
 <div align="center">
     <img src="plot.jpg" alt="Logo" width="" height="300">
 </div>
 
 ### 4.5. Evaluate
-In the evaluation section, the methods and metrics used to assess the model's performance are detailed. It explains how the model's segmentation results are quantified and provides insights into the model's effectiveness.
+The metric of evaluation using test dataset is 0.801. 
 
