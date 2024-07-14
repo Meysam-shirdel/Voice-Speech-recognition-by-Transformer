@@ -122,6 +122,16 @@ This part outlines the configuration settings used for training and evaluation. 
 ### 4.4. Train
 Here, you'll find instructions and code related to the training of the segmentation model. This section covers the process of training the model on the provided dataset.
 
+The training process consists of Finding Hyper-parameters and Main loop section. in Finding Hyper-parameters section, we used different scenarios to obtain best hyper-parameters like learning rate, weight decay, and, momentum. The result of this section is used to train the model in Main Loop.
+
+I made a grid of LR and WD like below
+
+learning rate : [ 1, 0.5, 0.1, 0.05, 0.01, 0.001 ]
+weight decay: [1e-6, 1e-5, 1e-4]
+The best train loss for above grid with two epoch obtained with LR= 0.05, WD= 1e-4, and momentum=0.9
+
+Then, after training the best model from previous step with LR= 0.05, WD=1e-4, result shows train loss=0.728 and metric= 0.817 and for validation, loss=0.7552 and metric=0.801  
+
 ### 4.5. Evaluate
 In the evaluation section, the methods and metrics used to assess the model's performance are detailed. It explains how the model's segmentation results are quantified and provides insights into the model's effectiveness.
 
