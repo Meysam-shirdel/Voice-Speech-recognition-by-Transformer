@@ -22,7 +22,7 @@ The primary objective of speech recognition is to develop a model that can accur
 
 
 ## 2. Related Works
-This section explores existing research and solutions related to speech recognition using deep learning models from 2017 to 2023, including the exact models used, descriptions, and links to their papers or GitHub repositories:
+This section explores existing research and solutions related to speech recognition using deep learning models from 2017 to 2023, including the exact models used, descriptions, and links to their papers or GitHub repositories: 
 
 | Date | Title                                  | Description                                                                                                 | Links                                                                                              |
 |------|----------------------------------------|-------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------|
