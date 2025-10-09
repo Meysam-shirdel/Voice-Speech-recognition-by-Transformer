@@ -9,7 +9,7 @@ Speech recognition, also known as  automatic speech recognition (ASR), is a tech
 The primary objective of speech recognition is to develop a model that can accurately transcribe spoken words into written text. This involves several key challenges:
 
 - **Acoustic Variability:**  Handling different accents, intonations, and speaking speeds.
-- **Background Noise:** Distinguishing speech from various background noises.
+- **Background Noise:** Distinguishing speech from various background noises. 
 - **Context Understanding:** Recognizing and interpreting words within the context of a sentence.
 - **Vocabulary Size:** Managing a large vocabulary and differentiating between similar-sounding words.
 
