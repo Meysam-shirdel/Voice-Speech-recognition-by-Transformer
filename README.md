@@ -14,7 +14,7 @@ The primary objective of speech recognition is to develop a model that can accur
 - **Vocabulary Size:** Managing a large vocabulary and differentiating between similar-sounding words.
 
 ### Applications
-
+ 
 - **Voice Assistants:** Powering virtual assistants like Siri, Alexa, and Google Assistant.
 - **Transcription Services:** Automating the transcription of meetings, interviews, and lectures. 
 - **Accessibility:** Assisting individuals with hearing impairments by providing real-time text transcriptions.
